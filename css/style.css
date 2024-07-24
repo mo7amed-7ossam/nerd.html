@@ -1,0 +1,434 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Cairo';
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+nav {
+    height: 60px;
+    box-shadow: 0px 0px 6px #00000063;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 1%;
+    position: relative;
+    z-index: 2;
+    padding-right: 3%;
+}
+
+nav .logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav .logo i {
+    color: #c049ef;
+
+}
+
+nav .nav-child {
+    display: flex;
+    gap: 30px;
+}
+
+nav .nav-child a {
+    text-transform: capitalize;
+}
+
+nav .nav-child a:hover {
+    text-decoration: underline 1px;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    height: calc(100vh - 60px);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+main aside {
+    box-shadow: 0px 0px 6px #00000063;
+    height: 100%;
+    width: 200px;
+    overflow: hidden;
+}
+
+
+main aside .categories {
+    height: 85%;
+    overflow: auto;
+}
+
+main aside .categories a {
+    display: flex;
+    align-items: center;
+    padding-left: 3vw;
+    text-transform: capitalize;
+    height: 10%;
+    border-bottom: solid 1px #7b7a7a42;
+    font-weight: 500;
+
+}
+
+main aside .categories a:hover {
+    background-color: #c049ef;
+    color: #fff;
+}
+
+main aside .follow {
+    height: 15%;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #c049ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: solid 3px #555;
+    border-bottom: solid 3px #555;
+    position: relative;
+}
+
+main aside .follow::after {
+    content: " ";
+    position: absolute;
+    right: 0px;
+    top: -3px;
+    height: calc(100% + 6px);
+    background-color: #f0f0f0;
+    width: 4px;
+}
+
+main aside .follow button {
+    background-color: #fff;
+    padding: 5px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s;
+}
+
+main aside .follow button:hover {
+    background-color: #d87efc;
+    color: #fff;
+    letter-spacing: 1.5px;
+    box-shadow: 0px 0px 3px #2d2d2d50;
+}
+
+main aside .follow button i {
+    margin-left: 5px;
+    transition: .2s;
+}
+
+main aside .follow button:hover i {
+    margin-left: 15px;
+}
+
+/* float follow */
+
+.float-follow {
+    position: fixed;
+    bottom: 100%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b3;
+    z-index: 9999;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+}
+
+
+.float-follow .follow-box {
+    width: 400px;
+    background-color: #f0f0f0;
+    padding: 2%;
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px #00000050;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.float-follow .follow-box .follow-close {
+    background-color: transparent;
+    font-size: 20px;
+    position: absolute;
+    top: 0%;
+    right: 0px;
+    background-color: #9338b6;
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transform: translate(40%, -40%);
+    border: solid 3px #fff;
+    box-shadow: 0px 0px 5px #00000050;
+    cursor: pointer;
+}
+
+.float-follow .follow-box .follow-close:hover {
+    background-color: #ad43d6;
+}
+
+.float-follow .follow-box .follow-close i {
+    color: #fff;
+}
+
+.float-follow .follow-box .social-box {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+}
+
+.float-follow .follow-box .social-box a {
+    font-size: 18px;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: .1s;
+    text-transform: capitalize;
+    background-color: #fff;
+        box-shadow: 0px 0px 5px #00000014;
+}
+
+.float-follow .follow-box .social-box a:hover {
+    color: #fff;
+    background-color: #c049ef;
+}
+
+.float-follow .follow-box .social-box a:hover i {
+    color: #fff;
+}
+
+.float-follow .follow-box .social-box a i {
+    width: 25px;
+    text-align: center;
+}
+
+.float-follow .follow-box img {
+    width: 38%;
+    border-radius: 50%;
+    border: solid 3px #fff;
+    outline: solid 2px #c049ef;
+}
+
+.float-follow-open {
+    bottom: 0%;
+}
+
+/* page content */
+
+main .page-content {
+    width: calc(100% - 200px);
+    height: 100%;
+    overflow: auto;
+}
+
+
+.introduction .header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.introduction .header .logo,
+.not-avilable .logo {
+    text-align: center;
+    font-size: 7.8vw;
+    line-height: 102px;
+
+}
+
+.introduction .header .logo i,
+.not-avilable .logo i {
+    color: #c049ef;
+}
+
+.introduction .header .description {
+    font-size: 23px;
+    line-height: 30px;
+    text-align: center;
+    width: 90%;
+    opacity: .8;
+    font-family: system-ui;
+}
+
+.introduction .header .btns {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+}
+
+.introduction .header .btns a {
+    padding: 5px 20px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    border: solid 2px #c049ef;
+}
+
+.introduction .header .btns a:nth-child(2) {
+    background-color: #c049ef;
+    color: #fff;
+}
+
+.introduction .header .btns a:hover {
+    background-color: #a335ce;
+    color: #fff;
+    transition: .1s;
+}
+
+/* features */
+.features {
+    padding-bottom: 50px;
+}
+
+.features .title {
+    font-size: calc(1vw + 25px);
+    line-height: 37px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #9338b6;
+    text-transform: capitalize;
+}
+
+.features .features-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.features .features-container .feature-box {
+    width: calc((100% - 20px) / 2);
+    text-align: center;
+    box-shadow: 0px 0px 5px #00000050;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.features .features-container .feature-box .feature-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.features .features-container .feature-box .feature-info {
+    font-weight: bold;
+    opacity: .8;
+}
+
+/* how use */
+
+.how-use {
+    padding-bottom: 40px;
+}
+
+.how-use .title {
+    font-size: calc(1vw + 25px);
+    line-height: 37px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #9338b6;
+    text-transform: capitalize;
+}
+
+.how-use ol {
+    list-style-position: inside;
+    width: 100%;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5%;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px #00000050;
+    background-color: #f0f0f0;
+}
+
+/* res */
+
+.not-avilable {
+    z-index: 33333333333333333;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #161616;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    flex-direction: column;
+    padding: 5%;
+    display: none;
+}
+
+.not-avilable span {
+    color: #c049ef;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.not-avilable .logo {
+    color: #fff;
+    font-size: 43px;
+    line-height: 46px;
+    margin-bottom: 10px;
+}
+
+@media(min-width:0px) and (max-width:830px) {
+    .features .features-container .feature-box {
+        width: 100%;
+    }
+
+}
+
+@media(min-width:0px) and (max-width:600px) {
+    .not-avilable {
+        display: flex;
+    }
+
+    * {
+        overflow: hidden;
+    }
+}
